@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='viewstyles.css') }}">
+  </head>
+  <body>
+    <div class="heading">Conversation</div>
+    <div class="bar"></div>
+    <div>
+      {% for i in (prediction_text) %} 
+      <div class="convo"> {{ i }} </div>
+      {% endfor %} 
+
+      
+
+
+    </div>
+  </body>
+</html>

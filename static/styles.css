@@ -1,0 +1,140 @@
+#headermain {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 60px;
+  color: black;
+}
+
+#bar {
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  background-color: rgb(41, 70, 124);
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#container {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  margin: auto;
+  width: 40%;
+  margin-top: 70px;
+  height: 460px;
+
+  box-shadow: 0 -12.8px 2.2px rgba(206, 69, 69, 0.034),
+    0 16.7px 5.3px rgba(0, 0, 0, 0.048), 0 -12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(150, 67, 67, 0.086),
+    0 100px 80px rgba(189, 63, 63, 0.12);
+}
+
+#grid2,
+#grid3 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#grid1 {
+  display: grid;
+  grid-template-columns: 270px 200px;
+  margin-top: 10px;
+}
+#grid2 {
+  margin-top: 10px;
+}
+#grid3 {
+  margin-top: 15px;
+}
+
+.choosehead {
+  margin-top: 70px;
+  margin-left: 20px;
+  font-size: 36px;
+  font-weight: 600;
+}
+.choose {
+  width: 200px;
+  font-size: 15px;
+  margin-left: 90px;
+  margin-top: 54px;
+}
+
+.submit {
+  color: white;
+  background-color: rgb(41, 70, 124);
+  border-radius: 6px;
+  height: 35px;
+  margin-top: 20px;
+  width: 115px;
+  margin-left: 120px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.predict {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.predictbutton {
+  color: white;
+  background-color: rgb(41, 70, 124);
+  border-radius: 6px;
+  height: 35px;
+  margin-top: 50px;
+  width: 115px;
+  margin-left: 40px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.view {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 36px;
+  font-weight: 600;
+}
+.viewbutton {
+  color: white;
+  background-color: rgb(41, 70, 124);
+  border-radius: 6px;
+  height: 35px;
+  margin-top: 50px;
+  width: 115px;
+  margin-left: -40px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.soapbutton {
+  color: white;
+  background-color: rgb(41, 70, 124);
+  border-radius: 6px;
+  height: 35px;
+  margin-top: 50px;
+  width: 115px;
+  margin-left: 70px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: black; /* Green */
+  color: white;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1300px) {
+  .choose {
+    margin-left: 10px;
+  }
+
+  .submit {
+    margin-left: 50px;
+  }
+}

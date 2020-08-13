@@ -1,0 +1,59 @@
+#headermain {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 60px;
+  color: black;
+}
+
+#bar {
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  background-color: rgb(41, 70, 124);
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+table,
+td,
+th {
+  border: 2px solid rgb(19, 112, 116);
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+
+  margin: auto;
+  margin-top: 40px;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+.one {
+  font-size: 20px;
+  font-weight: 600;
+  width: 24%;
+}
+.two {
+  font-size: 18px;
+}
+
+.onehead {
+  font-size: 30px;
+  text-align: center;
+}
+
+button {
+  margin-top: 45px;
+  color: white;
+  background-color: rgb(41, 70, 124);
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+  margin-left: 150px;
+}

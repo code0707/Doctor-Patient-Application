@@ -1,0 +1,20 @@
+.heading {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 60px;
+  color: black;
+}
+
+.bar {
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  background-color: rgb(41, 70, 124);
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.convo {
+  margin-left: 40px;
+  margin-top: 15px;
+  font-size: 26px;
+}

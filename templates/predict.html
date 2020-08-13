@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='predictstyles.css') }}"
+    />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://unpkg.com/jspdf@1.5.3/dist/jspdf.min.js"></script>
+    <script src="https://unpkg.com/jspdf-autotable@3.5.6/dist/jspdf.plugin.autotable.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      Detailed Note
+    </div>
+    <div id="bar"></div>
+
+    <div>
+      <table id="my-table">
+        <tr>
+          <td class="one">
+            <div class="predheading">
+              Patient complaint :
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text1) %}
+              <br />
+              {{ i }} {% endfor %}
+            </div>
+          </td>
+          <td class="two">
+            <div class="keyword">
+              Keywoards
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text0) %} {{ i }} , {% endfor %}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one">
+            <div class="predheading">
+              Patient's organ discussion :
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text3) %}
+              <br />
+              {{ i }} {% endfor %}
+            </div>
+          </td>
+          <td class="two">
+            <div class="keyword">
+              Keywoards
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text2) %} {{ i }} , {% endfor %}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one">
+            <div class="predheading">
+              Patient's family history :
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text5) %}
+              <br />
+              {{ i }} {% endfor %}
+            </div>
+          </td>
+          <td class="two">
+            <div class="keyword">
+              Keywoards
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text4) %} {{ i }} , {% endfor %}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="one">
+            <div class="predheading">
+              Doctor's recommendation :
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text7) %}
+              <br />
+              {{ i }} {% endfor %}
+            </div>
+          </td>
+          <td class="two">
+            <div class="keyword">
+              Keywoards
+            </div>
+            <div class="prediction">
+              {% for i in (prediction_text6) %} {{ i }} , {% endfor %}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button onclick="clicked()">Download as PDF</button>
+  </body>
+  <script>
+    function clicked() {
+      var doc = new jsPDF();
+      var header = function (data) {
+        doc.setFontSize(35);
+        doc.setTextColor(40);
+        doc.setFontStyle('normal');
+        doc.text('Detailed Note', data.settings.margin.left, 40);
+      };
+
+      doc.autoTable({
+        beforePageContent: header,
+        styles: { fontSize: 16, lineWidth: 0.5 },
+        columnStyles: {
+          0: { halign: 'center', cellWidth: 125, minCellHeight: 20 },
+        },
+        margin: { top: 60 },
+        html: '#my-table',
+      });
+      doc.save('p1.pdf');
+    }
+  </script>
+</html>
+
+<!-- Earlier Code ... Delete if working-->
+<!--
+   <div class="grid">
+      <div class="grid1">
+        <div class="predheading">
+          Patient complaint
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text1) %}
+          <br />
+          {{ i }} {% endfor %}
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="keyword">
+          Keywoards
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text0) %} {{ i }} , {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="grid1">
+        <div class="predheading">
+          Patient's organ discussion
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text3) %}
+          <br />
+          {{ i }} {% endfor %}
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="keyword">
+          Keywoards
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text2) %} {{ i }} , {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="grid1">
+        <div class="predheading">
+          Patient's family history discussion
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text5) %}
+          <br />
+          {{ i }} {% endfor %}
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="keyword">
+          Keywoards
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text4) %} {{ i }} , {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="grid1">
+        <div class="predheading">
+          Patient's food discussion
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text7) %}
+          <br />
+          {{ i }} {% endfor %}
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="keyword">
+          Keywoards
+        </div>
+        <div class="prediction">
+          {% for i in (prediction_text6) %} {{ i }} , {% endfor %}
+        </div>
+      </div>
+    </div>
+-->

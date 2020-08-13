@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+   
+  </head>
+  <body>
+    <h1 id="headermain">Upload Conversation</h1>
+    <div id="bar"></div>
+    <div id="container">
+      <form method="POST" action="data" enctype="multipart/form-data">
+        <div id="grid1">
+          <div class="choosehead">
+            Choose a file :
+          </div>
+          <div>
+            <input type="file" name="file" class="choose" />
+            <input type="submit" value="Submit" class="submit button" />
+          </div>
+        </div>
+      </form>
+
+      <div id="grid2">
+        <div class="predict">Detailed Note :</div>
+        <div>
+          <form method="POST" action="predict">
+            <input type="submit" value="View" class="predictbutton button" />
+          </form>
+        </div>
+      </div>
+
+      <div id="grid3">
+        <div class="view">View SOAP :</div>
+        <div>
+          <form method="POST" action="soap">
+            <input type="submit" value="View" class="soapbutton button" />
+          </form>
+        </div>
+      </div>
+
+      <div id="grid3">
+        <div class="view">View Conversation :</div>
+        <div>
+          <form method="POST" action="view">
+            <input type="submit" value="View" class="viewbutton button" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

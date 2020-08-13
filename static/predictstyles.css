@@ -1,0 +1,77 @@
+#bar {
+  width: 40%;
+  margin: auto;
+  height: 20px;
+  background-color: rgb(41, 70, 124);
+  margin-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.header {
+  text-align: center;
+  font-size: 58px;
+  margin-top: 20px;
+}
+
+.prediction {
+  text-align: justify;
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 900px 400px;
+  margin-bottom: 60px;
+}
+.predheading {
+  text-align: center;
+  font-size: 26px;
+  color: rgb(41, 70, 124);
+}
+.keyword {
+  text-align: center;
+  font-size: 26px;
+  color: rgb(41, 70, 124);
+}
+
+.span {
+  font-weight: 700px;
+}
+table,
+td,
+th {
+  border: 2px solid rgb(19, 112, 116);
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+
+  margin: auto;
+  margin-top: 40px;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+.one {
+  font-size: 20px;
+  width: 66%;
+}
+.two {
+  font-size: 18px;
+}
+button {
+  margin-top: 45px;
+  color: white;
+  background-color: rgb(41, 70, 124);
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+  margin-left: 150px;
+}
